@@ -1,0 +1,111 @@
+﻿<Window x:Class="DemantApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemantApp"
+        mc:Ignorable="d"
+        Title="Simple Converter"
+        Height="450"
+        Width="800"
+        MinHeight="200"
+        MinWidth="300">
+    <Grid MinWidth="250"
+          VerticalAlignment="Center"
+          HorizontalAlignment="Center"
+          ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!-- measurement label -->
+        <Label x:Name="MeasurementLabel"
+               Grid.Row="0"
+               Grid.ColumnSpan="2"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Margin="5,5"
+               Padding="5"
+               Background="LightGray">
+            Length
+         </Label>
+        
+        <!-- from and to labels -->
+        <Label x:Name="ExtraLabel1"
+               Grid.Row="1"
+               Grid.Column="0"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Center"
+               Margin="5,5"
+               Background="LightGray"
+               Content="From:"/>   
+        <Label x:Name="ExtraLabel2"
+               Grid.Row="1"
+               Grid.Column="1"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Center"
+               Margin="5,5"
+               Background="LightGray"
+               Content="To:"/>
+
+        <!-- input textbox -->
+        <TextBox x:Name="FromTextBox"
+                 Grid.Row="2"
+                 Grid.Column="0"
+                 HorizontalAlignment="Stretch"
+                 VerticalAlignment="Center"
+                 Margin="5,5"
+                 Padding="5"
+                 Background="LightGray"/>
+        <!-- result textbox -->
+        <TextBox x:Name="ToTextBox"
+                 Grid.Row="2"
+                 Grid.Column="1"
+                 HorizontalAlignment="Stretch"
+                 VerticalAlignment="Center"
+                 Margin="5,5"
+                 Padding="5"
+                 Background="LightGray"
+                 IsEnabled="False"/>
+
+        <!-- Existing From/To Labels moved to Row 3 -->
+        <Label x:Name="FromUnitLabel"
+               Grid.Row="3"
+               Grid.Column="0"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Center"
+               Margin="5,5"
+               Background="LightGray">
+            cm
+        </Label>
+        <Label x:Name="ToUnitLabel"
+               Grid.Row="3"
+               Grid.Column="1"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Center"
+               Margin="5,5"
+               Background="LightGray">
+            m
+        </Label>
+
+        <Button x:Name="ConvertButton"
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="5,5"
+                Padding="5"
+                Background="LightGray"
+                Click="ConvertButton_Click">
+            Convert
+        </Button>
+    </Grid>
+</Window>
