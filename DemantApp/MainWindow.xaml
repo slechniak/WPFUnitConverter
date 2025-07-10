@@ -34,7 +34,7 @@
 
     </Window.Resources>
 
-        <!-- layout grid -->
+     <!-- layout grid -->
     
     <Grid x:Name="BaseGrid"
           Style="{StaticResource BaseGridStyle}">
