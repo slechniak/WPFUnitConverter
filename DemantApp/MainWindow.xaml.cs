@@ -25,7 +25,7 @@ namespace DemantApp
         {
             if (double.TryParse(FromTextBox.Text, out double number))
             {
-                ToTextBox.Text = (number / 1.609).ToString();
+                ToTextBox.Text = Math.Round((number / 1.609), 4).ToString();
             }
             else
             {

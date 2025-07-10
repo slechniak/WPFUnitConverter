@@ -16,9 +16,7 @@
           MinWidth="250"
           MaxWidth="250"
           VerticalAlignment="Center"
-          HorizontalAlignment="Center"
-          ShowGridLines="False"
-          Background="LightSlateGray">
+          HorizontalAlignment="Center">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
@@ -38,8 +36,7 @@
                HorizontalAlignment="Center"
                VerticalAlignment="Center"
                Margin="5,5"
-               Padding="5"
-               Background="LightGray">
+               Padding="5">
             Length
          </Label>
         
@@ -50,7 +47,6 @@
                HorizontalAlignment="Stretch"
                VerticalAlignment="Center"
                Margin="5,5"
-               Background="LightGray"
                Content="From:"/>   
         <Label x:Name="ExtraLabel2"
                Grid.Row="1"
@@ -58,7 +54,6 @@
                HorizontalAlignment="Stretch"
                VerticalAlignment="Center"
                Margin="5,5"
-               Background="LightGray"
                Content="To:"/>
 
         <!-- input textbox -->
@@ -68,8 +63,7 @@
                  HorizontalAlignment="Stretch"
                  VerticalAlignment="Center"
                  Margin="5,5"
-                 Padding="5"
-                 Background="LightGray"/>
+                 Padding="5"/>
         <!-- result textbox -->
         <TextBox x:Name="ToTextBox"
                  Grid.Row="2"
@@ -77,9 +71,7 @@
                  HorizontalAlignment="Stretch"
                  VerticalAlignment="Center"
                  Margin="5,5"
-                 Padding="5"
-                 Background="LightGray"
-                 IsEnabled="False"/>
+                 Padding="5"/>
 
         <!-- Existing From/To Labels moved to Row 3 -->
         <Label x:Name="FromUnitLabel"
@@ -87,8 +79,7 @@
                Grid.Column="0"
                HorizontalAlignment="Stretch"
                VerticalAlignment="Center"
-               Margin="5,5"
-               Background="LightGray">
+               Margin="5,5">
             kilometer
         </Label>
         <Label x:Name="ToUnitLabel"
@@ -96,8 +87,7 @@
                Grid.Column="1"
                HorizontalAlignment="Stretch"
                VerticalAlignment="Center"
-               Margin="5,5"
-               Background="LightGray">
+               Margin="5,5">
             mile
         </Label>
 
@@ -108,10 +98,8 @@
                 VerticalAlignment="Center"
                 Margin="5,5"
                 Padding="5"
-                Background="LightGray"
                 Click="ConvertButton_Click"
-                IsDefault="True"
-                >
+                IsDefault="True">
             Convert
         </Button>
     </Grid>
