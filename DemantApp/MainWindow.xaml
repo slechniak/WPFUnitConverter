@@ -10,10 +10,13 @@
         Width="300"
         MinHeight="250"
         MinWidth="300">
-    <Grid MinWidth="250"
+    <Grid x:Name="BaseGrid"
+          MinWidth="250"
+          MaxWidth="250"
           VerticalAlignment="Center"
           HorizontalAlignment="Center"
-          ShowGridLines="False">
+          ShowGridLines="False"
+          Background="LightSlateGray">
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
@@ -22,8 +25,8 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <!-- measurement label -->
