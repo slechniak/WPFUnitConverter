@@ -7,34 +7,36 @@
         mc:Ignorable="d"
         Title="Simple Converter"
         Height="250"
-        Width="300"
-        MinHeight="250"
-        MinWidth="300"
+        Width="400"
         ResizeMode="NoResize"
         Loaded="Window_Loaded">
 
     <Window.Resources>
         <!-- Style for the TextBoxes -->
         <Style TargetType="TextBox">
-            <Setter Property="Margin" Value="5,5"/>
+            <Setter Property="Margin" Value="5"/>
             <Setter Property="Padding" Value="5"/>
         </Style>
 
         <Style TargetType="Button" x:Key="ConvertButtonStyle">
-            <Setter Property="Margin" Value="5,5"/>
+            <Setter Property="Margin" Value="5"/>
             <Setter Property="Padding" Value="5"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="IsDefault" Value="True"/>
+        </Style>
+
+        <Style TargetType="Grid" x:Key="BaseGridStyle">
+            <Setter Property="MinWidth" Value="250" />
+            <Setter Property="MaxWidth" Value="250" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
         </Style>
 
     </Window.Resources>
 
     <!-- layout grid -->
         <Grid x:Name="BaseGrid"
-          MinWidth="250"
-          MaxWidth="250"
-          VerticalAlignment="Center"
-          HorizontalAlignment="Center">
+              Style="{StaticResource BaseGridStyle}">
             
         <Grid.RowDefinitions>
             <RowDefinition />
