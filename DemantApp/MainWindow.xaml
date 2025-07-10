@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:DemantApp"
         mc:Ignorable="d"
         Title="Simple Converter"
-        Height="450"
-        Width="800"
-        MinHeight="200"
+        Height="250"
+        Width="300"
+        MinHeight="250"
         MinWidth="300">
     <Grid MinWidth="250"
           VerticalAlignment="Center"
@@ -84,7 +84,7 @@
                VerticalAlignment="Center"
                Margin="5,5"
                Background="LightGray">
-            cm
+            kilometer
         </Label>
         <Label x:Name="ToUnitLabel"
                Grid.Row="3"
@@ -93,7 +93,7 @@
                VerticalAlignment="Center"
                Margin="5,5"
                Background="LightGray">
-            m
+            mile
         </Label>
 
         <Button x:Name="ConvertButton"

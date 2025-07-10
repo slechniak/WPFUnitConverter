@@ -23,7 +23,14 @@ namespace DemantApp
 
         private void ConvertButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Convert button clicked!");
+            if (double.TryParse(FromTextBox.Text, out double number))
+            {
+                ToTextBox.Text = (number / 1.609).ToString();
+            }
+            else
+            {
+                ToTextBox.Text = "Invalid input";
+            }
         }
     }
 }
