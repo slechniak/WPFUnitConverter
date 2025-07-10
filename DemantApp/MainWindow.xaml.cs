@@ -23,19 +23,19 @@ namespace DemantApp
 
         private void ConvertButton_Click(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(FromTextBox.Text, out double number))
+            if (double.TryParse(InputTextBox.Text, out double number))
             {
-                ToTextBox.Text = Math.Round((number / 1.609), 4).ToString();
+                ResultTextBox.Text = Math.Round((number / 1.60934), 4).ToString();
             }
             else
             {
-                ToTextBox.Text = "Invalid input";
+                ResultTextBox.Text = "Invalid input";
             }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            FromTextBox.Focus();
+            InputTextBox.Focus();
         }
     }
 }

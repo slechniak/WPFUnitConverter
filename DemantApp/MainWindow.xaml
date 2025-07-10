@@ -12,11 +12,30 @@
         MinWidth="300"
         ResizeMode="NoResize"
         Loaded="Window_Loaded">
-    <Grid x:Name="BaseGrid"
+
+    <Window.Resources>
+        <!-- Style for the TextBoxes -->
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5,5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="ConvertButtonStyle">
+            <Setter Property="Margin" Value="5,5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="IsDefault" Value="True"/>
+        </Style>
+
+    </Window.Resources>
+
+    <!-- layout grid -->
+        <Grid x:Name="BaseGrid"
           MinWidth="250"
           MaxWidth="250"
           VerticalAlignment="Center"
           HorizontalAlignment="Center">
+            
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
@@ -24,83 +43,62 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
+            
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <!-- measurement label -->
+            
         <Label x:Name="MeasurementLabel"
                Grid.Row="0"
                Grid.ColumnSpan="2"
                HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               Margin="5,5"
-               Padding="5">
-            Length
-         </Label>
-        
-        <!-- from and to labels -->
-        <Label x:Name="ExtraLabel1"
+               Content="Length"/>
+
+        <!-- input and result labels -->
+            
+        <Label x:Name="InputLabel"
                Grid.Row="1"
                Grid.Column="0"
-               HorizontalAlignment="Stretch"
-               VerticalAlignment="Center"
-               Margin="5,5"
-               Content="From:"/>   
-        <Label x:Name="ExtraLabel2"
+               Content="From:"/>  
+            
+        <Label x:Name="ResultLabel"
                Grid.Row="1"
                Grid.Column="1"
-               HorizontalAlignment="Stretch"
-               VerticalAlignment="Center"
-               Margin="5,5"
                Content="To:"/>
 
-        <!-- input textbox -->
-        <TextBox x:Name="FromTextBox"
+        <!-- input and result textboxes -->
+            
+        <TextBox x:Name="InputTextBox"
                  Grid.Row="2"
-                 Grid.Column="0"
-                 HorizontalAlignment="Stretch"
-                 VerticalAlignment="Center"
-                 Margin="5,5"
-                 Padding="5"/>
-        <!-- result textbox -->
-        <TextBox x:Name="ToTextBox"
+                 Grid.Column="0"/>
+            
+        <TextBox x:Name="ResultTextBox"
                  Grid.Row="2"
-                 Grid.Column="1"
-                 HorizontalAlignment="Stretch"
-                 VerticalAlignment="Center"
-                 Margin="5,5"
-                 Padding="5"/>
+                 Grid.Column="1"/>
 
-        <!-- Existing From/To Labels moved to Row 3 -->
-        <Label x:Name="FromUnitLabel"
+        <!-- input and result units -->
+            
+        <Label x:Name="InputUnitLabel"
                Grid.Row="3"
                Grid.Column="0"
-               HorizontalAlignment="Stretch"
-               VerticalAlignment="Center"
-               Margin="5,5">
-            kilometer
-        </Label>
-        <Label x:Name="ToUnitLabel"
+               Content="kilometer"/>
+
+        <Label x:Name="ResultUnitLabel"
                Grid.Row="3"
                Grid.Column="1"
-               HorizontalAlignment="Stretch"
-               VerticalAlignment="Center"
-               Margin="5,5">
-            mile
-        </Label>
+               Content="mile"/>
 
+        <!-- convert button -->
+            
         <Button x:Name="ConvertButton"
                 Grid.Row="4"
                 Grid.ColumnSpan="2"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Margin="5,5"
-                Padding="5"
+                Style="{StaticResource ConvertButtonStyle}"
                 Click="ConvertButton_Click"
-                IsDefault="True">
-            Convert
-        </Button>
+                Content="Convert"/>
+
     </Grid>
 </Window>
