@@ -9,7 +9,9 @@
         Height="250"
         Width="300"
         MinHeight="250"
-        MinWidth="300">
+        MinWidth="300"
+        ResizeMode="NoResize"
+        Loaded="Window_Loaded">
     <Grid x:Name="BaseGrid"
           MinWidth="250"
           MaxWidth="250"
@@ -107,7 +109,9 @@
                 Margin="5,5"
                 Padding="5"
                 Background="LightGray"
-                Click="ConvertButton_Click">
+                Click="ConvertButton_Click"
+                IsDefault="True"
+                >
             Convert
         </Button>
     </Grid>

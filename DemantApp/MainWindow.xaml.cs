@@ -32,5 +32,10 @@ namespace DemantApp
                 ToTextBox.Text = "Invalid input";
             }
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            FromTextBox.Focus();
+        }
     }
 }
