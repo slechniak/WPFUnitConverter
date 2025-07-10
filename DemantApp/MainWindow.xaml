@@ -12,7 +12,7 @@
         Loaded="Window_Loaded">
 
     <Window.Resources>
-        <!-- Style for the TextBoxes -->
+        
         <Style TargetType="TextBox">
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Padding" Value="5"/>
@@ -34,9 +34,10 @@
 
     </Window.Resources>
 
-    <!-- layout grid -->
-        <Grid x:Name="BaseGrid"
-              Style="{StaticResource BaseGridStyle}">
+        <!-- layout grid -->
+    
+    <Grid x:Name="BaseGrid"
+          Style="{StaticResource BaseGridStyle}">
             
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -60,7 +61,7 @@
                Content="Length"/>
 
         <!-- input and result labels -->
-            
+
         <Label x:Name="InputLabel"
                Grid.Row="1"
                Grid.Column="0"

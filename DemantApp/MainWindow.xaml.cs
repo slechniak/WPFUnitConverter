@@ -21,6 +21,9 @@ namespace DemantApp
             InitializeComponent();
         }
 
+        /// <summary>
+        /// converts kilometers to miles when the button is clicked, rounding the result to 4 decimal places
+        /// </summary>
         private void ConvertButton_Click(object sender, RoutedEventArgs e)
         {
             if (double.TryParse(InputTextBox.Text, out double number))
@@ -33,6 +36,9 @@ namespace DemantApp
             }
         }
 
+        /// <summary>
+        /// sets focus to the input textbox when the window is loaded, so it does not require a click to start typing
+        /// </summary>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             InputTextBox.Focus();
