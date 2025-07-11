@@ -76,11 +76,13 @@
             
         <TextBox x:Name="InputTextBox"
                  Grid.Row="2"
-                 Grid.Column="0"/>
+                 Grid.Column="0"
+                 Text="{Binding InputText}"/>
             
         <TextBox x:Name="ResultTextBox"
                  Grid.Row="2"
-                 Grid.Column="1"/>
+                 Grid.Column="1"
+                 Text="{Binding ResultText}"/>
 
         <!-- input and result units -->
             
@@ -100,7 +102,7 @@
                 Grid.Row="4"
                 Grid.ColumnSpan="2"
                 Style="{StaticResource ConvertButtonStyle}"
-                Click="ConvertButton_Click"
+                Command="{Binding ConvertCommand}"
                 Content="Convert"/>
 
     </Grid>

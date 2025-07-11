@@ -9,22 +9,8 @@ namespace DemantApp
     {
         public MainWindow()
         {
+            DataContext = new SpecificViewModel();
             InitializeComponent();
-        }
-
-        /// <summary>
-        /// converts kilometers to miles when the button is clicked, rounding the result to 4 decimal places
-        /// </summary>
-        private void ConvertButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (double.TryParse(InputTextBox.Text, out double number))
-            {
-                ResultTextBox.Text = Math.Round((number / 1.60934), 4).ToString();
-            }
-            else
-            {
-                ResultTextBox.Text = "Invalid input";
-            }
         }
 
         /// <summary>
